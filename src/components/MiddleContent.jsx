@@ -22,9 +22,10 @@ function MiddleContent({data = []}){
         {data.map((item, idx) => {
           return <div key={idx} className="flex-1 items-center flex flex-col min-w-56 max-w-56 p-5 border-2 rounded-2xl border-yellow-500 min-h-80 max-h-80 justify-between gap-2">
             <div className="max-h-40">
-              <Image objectFit="contain" height={50} width={50} style={{
+              <Image height={50} width={50} style={{
                 width: "auto",
                 height: "auto",
+                objectFit: "contain"
               }} src={item.image} alt={item.title} />
             </div>
             <p className="text-center">{item.title.slice(0, 16)}...</p>
